@@ -1,12 +1,26 @@
 let formBtn=document.querySelector('.fa-user');
 let loginForm=document.querySelector('.login-form-container');
+let navbar = document.querySelector('.navbar');
 let formClose=document.querySelector('#form-close');
 let slides=document.querySelectorAll('.slide-container');
+let menu = document.querySelector('#menu-bar');
 let index=0;
+
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
+  
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
 
 formBtn.addEventListener('click',()=>{
     loginForm.classList.add('active');
 })
+
 formClose.addEventListener('click',()=>{
     loginForm.classList.remove('active')
 ;})

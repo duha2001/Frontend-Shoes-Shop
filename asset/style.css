@@ -99,7 +99,7 @@ header .logo span {
   color: var(--orange);
 }
 
-header .navbar a {
+header .navbar a{
   font-size: 1.7rem;
   color: var(--black);
   margin: 0 1rem;
@@ -111,7 +111,7 @@ header .navbar a:hover {
 }
 
 header .icons a {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: var(--black);
   margin-left: 1.5rem;
 }
@@ -638,6 +638,7 @@ header .icons a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .footer .box-container .box{
@@ -674,4 +675,76 @@ header .icons a:hover {
 
 .footer .box-container .credit span{
   color: var(--orange);
+}
+
+@media (max-width:991px){
+
+  html{
+    font-size: 55%;
+  }
+
+  header{
+    padding:2rem;
+  }
+
+  section{
+    padding:2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-bar{
+    display: block;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; left:-120%;
+    width:100%;
+    background:#eee;
+    border-top: .1rem solid rgba(0,0,0,.1);
+  }
+
+  header .navbar.active{
+    left:0;
+  }
+
+  header .navbar a{
+    font-size: 2rem;
+    background:#fff;
+    border:.1rem solid var(--black);
+    border-radius: .5rem;
+    padding:1.5rem;
+    margin:1.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .home .slide-container .slide .image .text{
+    width:60%;
+  }
+
+  .home #prev,
+  .home #next{
+    top:85%;
+  }
+
+}
+
+@media (max-width:400px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .home .slide-container .slide .image{
+    padding-bottom: 6rem;
+  }
+
+  .heading{
+    font-size: 3rem;
+  }
+
 }
